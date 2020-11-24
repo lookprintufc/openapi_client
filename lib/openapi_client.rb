@@ -68,6 +68,7 @@ require 'openapi_client/models/status'
 require 'openapi_client/models/statuses'
 require 'openapi_client/models/webhook_status'
 require 'openapi_client/models/webhook_url'
+require 'openapi_client/models/check_phone'
 
 # APIs
 require 'openapi_client/api/class1_instance_api'
