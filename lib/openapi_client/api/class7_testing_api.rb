@@ -31,7 +31,7 @@ module OpenapiClient
       end
 
       # resource path
-      local_var_path = '/check_phone'
+      local_var_path = '/checkPhone'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -67,8 +67,6 @@ module OpenapiClient
         @api_client.config.logger.debug "API called: Class7TestingApi#check_phone\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-
-  
     end
 
 
