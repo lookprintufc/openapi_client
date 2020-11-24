@@ -19,6 +19,64 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+
+    def check_phone(opts = {})
+      data, _status_code, _headers = check_phone_with_http_info(opts)
+      data
+    end
+
+    def check_phone_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: Class7TestingApi.check_phone ...'
+      end
+
+      # resource path
+      local_var_path = '/check_phone'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] 
+
+      # return_type
+      return_type = opts[:return_type] || 'CheckPhone' 
+
+      # auth_names
+      auth_names = opts[:auth_names] || ['instanceId', 'token']
+
+      new_options = opts.merge(
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: Class7TestingApi#check_phone\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+
+  
+    end
+
+
+
+
+
+
+
     # Returns instance status changes history.
     # Requires enable \"instanceStatuses\" option for collecting data.
     # @param [Hash] opts the optional parameters
