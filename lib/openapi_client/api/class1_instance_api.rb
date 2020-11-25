@@ -464,6 +464,7 @@ module OpenapiClient
         :auth_names => auth_names,
         :return_type => return_type
       )
+      p new_options
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
