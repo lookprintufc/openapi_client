@@ -431,7 +431,7 @@ module OpenapiClient
         fail ArgumentError, "Missing the required parameter 'settings' when calling Class1InstanceApi.set_settings"
       end
       # resource path
-      api_client.config.auth_settings
+     p  api_client.config.auth_settings
       local_var_path = "/instance123/settings"
 
       # query parameters
