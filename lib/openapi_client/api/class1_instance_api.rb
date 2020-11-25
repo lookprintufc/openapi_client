@@ -431,7 +431,7 @@ module OpenapiClient
         fail ArgumentError, "Missing the required parameter 'settings' when calling Class1InstanceApi.set_settings"
       end
       # resource path
-      local_var_path = "instance#{opts[:auth_names][:instanceId]}/settings"
+      local_var_path = "/instance#{opts[:auth_names][:instanceId]}/settings"
 
       # query parameters
       query_params = opts[:query_params] || {}
