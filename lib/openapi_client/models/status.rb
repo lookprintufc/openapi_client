@@ -20,11 +20,14 @@ module OpenapiClient
     # status name (\"init\", \"got qr code\", \"loading\", \"authenticated\")
     attr_accessor :status
 
+    attr_accessor :substatus
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'date' => :'date',
-        :'status' => :'status'
+        :'status' => :'status',
+        :'substatus' => :'substatus'
       }
     end
 
@@ -32,7 +35,8 @@ module OpenapiClient
     def self.openapi_types
       {
         :'date' => :'String',
-        :'status' => :'String'
+        :'status' => :'String',
+        :'substatus' => :'substatus'
       }
     end
 
@@ -64,6 +68,12 @@ module OpenapiClient
       if attributes.key?(:'status')
         self.status = attributes[:'status']
       end
+
+      if attributes.key?(:'substatus')
+        self.substatus = attributes[:'substatus']
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -97,7 +107,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [date, status].hash
+      [date, status, substatus].hash
     end
 
     # Builds the object from hash
