@@ -36,7 +36,7 @@ module OpenapiClient
       {
         :'date' => :'String',
         :'status' => :'String',
-        :'substatus' => :'substatus'
+        :'substatus' => :'String'
       }
     end
 
